@@ -1,13 +1,16 @@
+var Quiz = require('../models/quiz_model');
+
+var quiz = new Quiz();
+var current = quiz.randomQuestion();
 /* GET quizes/question page. */
-exports.question = function(req, res){
-  res.render('quizes/question',{pregunta: 'Capital de Italia'});
+exports.question = function(req,res) {
+  current = quiz.randomQuestion();
+  res.render('quizes/question', {pregunta: current.pregunta});
 };
 
 /* GET quizes/answer page. */
-exports.answer = function(req, res){
-  if(req.query.respuesta == 'Roma'){
-    res.render('quizes/answer',{respuesta: 'Correcto'});
-  }else {
-    res.render('quizes/answer',{respuesta: 'Incorrecto'});
-  }
+exports.answer = function(req, res) {
+  var c = 'Incorrecto';
+  if (current.respuesta(req.query.respuesta)) { c = 'Correcto'; }
+  res.render('quizes/answer', {respuesta: c});
 };
