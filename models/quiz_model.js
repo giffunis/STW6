@@ -8,6 +8,7 @@ function Quiz() {
         return (/^\s*roma\s*$/i).exec(x);
       }
     },
+
     {
       pregunta: '¿Quien reinaba en España cuando se descubrió América?',
       respuesta: function(x) {
@@ -18,6 +19,7 @@ function Quiz() {
         return false;
       },
     },
+
     { /* Código inseguro. ¡No ejecute esta pregunta salvo en un
          entorno en el que el código del "alumno" sea fiable!
        */
@@ -36,6 +38,7 @@ function Quiz() {
       }
     }
   );
+
   // insertar unas cuantas preguntas sobre
   // la tabla de multiplicar
   var self  = this;
@@ -55,6 +58,7 @@ function Quiz() {
       })
     })();
   }
+  
   // debug(this.q);
 }
 

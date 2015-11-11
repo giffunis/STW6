@@ -14,3 +14,12 @@ exports.answer = function(req, res) {
   if (current.respuesta(req.query.respuesta)) { c = 'Correcto'; }
   res.render('quizes/answer', {respuesta: c});
 };
+
+exports.questions = function(req, res){
+  var nQ = quiz.nQuestions();
+  var salida = new Array(nQ);
+  for(var i = 0; i < nQ; i++){
+    salida[i] = quiz.getQuestion(i);
+  }
+  res.render('quizes/questions', {respuesta: salida});
+};

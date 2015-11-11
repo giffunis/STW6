@@ -15,6 +15,6 @@ router.get('/quizes/question', quizController.question);
 router.get('/quizes/answer', quizController.answer);
 
 /* GET quizes/questions page.*/
-router.get('/quizes/questions', quizController.question);
+router.get('/quizes/questions', quizController.questions);
 
 module.exports = router;
