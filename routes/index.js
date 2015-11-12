@@ -17,4 +17,7 @@ router.get('/quizes/answer', quizController.answer);
 /* GET quizes/questions page.*/
 router.get('/quizes/questions', quizController.questions);
 
+/* GET quizes/questions/:id */
+router.get('quizes/questions/:id', quizController.questions);
+
 module.exports = router;
