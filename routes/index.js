@@ -18,6 +18,6 @@ router.get('/quizes/answer', quizController.answer);
 router.get('/quizes/questions', quizController.questions);
 
 /* GET quizes/questions/:id */
-router.get('quizes/questions/:id', quizController.questions);
+router.get('/quizes/questions/:id', quizController.choosedQuestion);
 
 module.exports = router;

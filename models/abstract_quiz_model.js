@@ -18,7 +18,7 @@ AbstractQuiz.prototype.nQuestions = function() {
 }
 
 AbstractQuiz.prototype.getQuestion = function(n) {
-  return this.q[n]['pregunta'];
+  return this.q[n];
 }
 
 module.exports = AbstractQuiz;

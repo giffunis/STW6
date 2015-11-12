@@ -23,3 +23,13 @@ exports.questions = function(req, res){
   }
   res.render('quizes/questions', {respuesta: salida});
 };
+
+exports.choosedQuestion = function(req, res){
+  try {
+    current = quiz.getQuestion(req.params.id - 1);
+    res.render('quizes/question', {pregunta: current.pregunta});
+  }catch (e) {
+    res.render('quizes/questions', {respuesta: "no existe esa pregunta"});
+  }
+
+};
