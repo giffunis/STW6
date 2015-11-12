@@ -29,7 +29,7 @@ exports.choosedQuestion = function(req, res){
     current = quiz.getQuestion(req.params.id - 1);
     res.render('quizes/question', {pregunta: current.pregunta});
   }catch (e) {
-    res.render('quizes/questions', {respuesta: "no existe esa pregunta"});
+    res.render('error2', {message: "No existe esa pregunta"});
   }
 
 };
