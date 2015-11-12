@@ -18,8 +18,8 @@ exports.answer = function(req, res) {
 exports.questions = function(req, res){
   var nQ = quiz.nQuestions();
   var salida = new Array(nQ);
-  // for(var i = 0; i < nQ; i++){
-  //   salida[i] = quiz.getQuestion(i);
-  // }
-  res.render('quizes/questions', {respuesta: nQ});
+  for(var i = 0; i < nQ; i++){
+     salida[i] = quiz.getQuestion(i);
+  }
+  res.render('quizes/questions', {respuesta: salida});
 };
