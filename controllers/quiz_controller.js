@@ -8,6 +8,10 @@ exports.question = function(req,res) {
   res.render('quizes/question', {pregunta: current.pregunta});
 };
 
+exports.home = function(req, res){
+  res.render('index', {title: 'Quiz'});
+}
+
 /* GET quizes/answer page. */
 exports.answer = function(req, res) {
   var c = 'Incorrecto';
